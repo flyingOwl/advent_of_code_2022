@@ -1,7 +1,10 @@
 SCRIPTS = $(wildcard src/*.py)
 INPUT = $(patsubst src/%.py, input/%.txt, $(SCRIPTS))
+PUZZLES = $(patsubst src/%.py, puzzle_%, $(SCRIPTS))
 url = $(shell echo $@ | sed -e "s/input\/0\?\([0-9]\+\).txt/2022\/day\/\1\/input/g")
 num = $(shell echo $@ | sed -e "s/\(puzzle_\|example_\)//g")
+
+all: $(PUZZLES)
 
 input: $(INPUT)
 
