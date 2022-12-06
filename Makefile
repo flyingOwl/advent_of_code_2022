@@ -9,6 +9,7 @@ all: $(PUZZLES)
 input: $(INPUT)
 
 input/%.txt: .session
+	mkdir -p input/
 	curl -H @.session https://adventofcode.com/$(url) > $@
 
 puzzle_%: input/%.txt
