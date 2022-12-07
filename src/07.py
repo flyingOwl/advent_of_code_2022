@@ -3,7 +3,7 @@ c=C=(0,)
 F={}
 for l in open(sys.argv[1]):
 	p,_,*n=l.split()
-	if n:c={"/":C,".":c[:-1]}.get(l[5],c+(*n,))
+	if n:c={"/":C,"..":c[:-1]}.get(*n,c+(*n,))
 	if p.isdigit():
 		d=c
 		while d:F[d]=F.get(d,0)+int(p);d=d[:-1]
