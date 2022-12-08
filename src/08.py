@@ -1,8 +1,8 @@
 import sys
 e=enumerate
 def F(X,Y,x,y):
-	L=[X[:x],X[:x:-1],Y[:y],Y[:y:-1]];h=0;s=1;v=X[x]
-	for l in L:
+	h=0;s=1;v=X[x]
+	for l in [X[:x],X[:x:-1],Y[:y],Y[:y:-1]]:
 		t=0;u=1
 		while u and l:u&=l.pop()<v;t+=1
 		h|=u;s*=t
