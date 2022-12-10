@@ -1,5 +1,5 @@
 import sys
-O=lambda x:chr([365,258,172,0,194,110,316,410,232,357,186,90,0,0,300,174,0,254,191,0,345,0,0,0,118,255].index(x)+65)
+O=lambda x:"X L  J  G K IAHS  E   F       Y   RZOUB C P"[x%44]
 L=[1];e=enumerate
 for l in open(sys.argv[1]):
 	L+=[L[-1]]
